@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>QR Code Generator</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Convert <span>into QR</span></h1>
+        <input type="text" placeholder="Enter Text/URL" id="input"/>
+        <div id="ans">
+            <img src="" id="ouput">
+        </div> 
+        <button id="generateBtn" onclick = "generateQR()">Generate</button>
+    </div>
+
+    <script>
+        let input = document.getElementById("input");
+        let img = document.querySelector("img");
+        let output = document.getElementById("ans");
+        let btn = document.querySelector("button");
+
+        function generateQR(){
+            if(input.value!=""){
+                let link = "https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=" + input.value;
+                img.setAttribute("src", link); 
+                output.classList.add("show");
+            }
+            else{
+                alert("Enter a Text/URL!");
+            }
+        }
+
+        document.addEventListener("keydown", (e)=>{
+            if(e.key=="Enter"){
+                btn.click();
+                e.preventDefault();
+            }
+        })
+    
+    </script>
+</body>
+</html>

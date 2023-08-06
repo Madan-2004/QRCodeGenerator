@@ -1,0 +1,74 @@
+@import url('https://fonts.googleapis.com/css2?family=Edu+SA+Beginner:wght@400;500;600;700&family=Lato:ital,wght@0,300;0,400;1,300;1,700&family=Poppins:wght@300;400;500;600;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Lato', sans-serif;
+}
+
+body{
+    background-image: linear-gradient(to right, #DECBA4, #3E5151);
+}
+
+.container{
+    max-width: 500px;
+    width: 90%;
+    margin: 100px auto 20px;
+    text-align: center;
+    background-color:aliceblue;
+    padding: 30px;
+    border-radius: 30px;
+}
+
+h1 span{
+    color:rgb(138, 127, 255);
+}
+
+input{
+    margin: 30px 0px;
+    height: 50px;
+    width: 90%;
+    font-size: 20px;
+    padding: 10px;
+    outline: 0;
+    border: 0;
+    border-radius: 10px;
+}
+
+button{
+    margin: 20px 0px;
+    height: 50px;
+    font-size: 20px;
+    padding: 10px 20px;
+    border-radius: 10px;
+    border: 0;
+    outline: 0;
+    transition: 0.3s ease-in-out;
+    cursor: pointer;
+    background-color:#3E5151;
+    color: #fff;
+}
+
+button:hover{
+    box-shadow: 10px 10px 10px #3E5151;
+}
+
+#ans{
+    width: 200px;
+    border-radius: 10px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 1s;
+}
+
+#ans img{
+    width: 100%;
+    padding: 10px;
+}
+
+#ans.show{
+    max-height: 300px;
+    margin: 10px auto;
+    border: 1px solid #3E5151;      
+}
